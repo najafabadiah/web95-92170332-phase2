@@ -417,6 +417,17 @@ nav .search {
 
 #blog {
   margin-top: 20px; }
+  #blog #add-post {
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    background-color: #00cc7a;
+    margin-bottom: 20px; }
+  #blog #add-post:hover {
+    background-color: rgba(0, 204, 122, 0.85); }
   #blog .blog-item {
     float: left;
     border: 1px solid red;
@@ -625,6 +636,13 @@ html {
         color: blue; }
     #single-post .post-body .post-comments h3 {
       font-weight: 400; }
+
+#post-creator .form-group {
+  width: 70%; }
+  #post-creator .form-group .line-group input {
+    width: 100%; }
+  #post-creator .form-group .line-group textarea {
+    width: 100%; }
 
 .form-group {
   position: relative;

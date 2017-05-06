@@ -6,6 +6,7 @@
     <title>Blog</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -29,6 +30,9 @@
 
     <!-- main and blog -->
     <div class="container" id="blog">
+        <div id="add-post">
+            Add Post
+        </div>
         <div class="card-columns">
             <div class="card">
                 <div class="card-header card-color-default">
@@ -51,174 +55,8 @@
                     <cite class="card-font-color-default">Mar, 2017</cite>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header card-color-primary">
-                    <div class="author-img"><img src="../assets/images/a4.png"></div>
-                    <div class="author">Lisa Jones</div>
-                </div>
-                <div class="card-block">
-                    <div class="post-img">
-                        <img src="../assets/images/real1.jpg">
-                        <a href="#">
-                            <div class="reference">
-                                <i class="fa fa-chain"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <h2><a href="#">Title Title Title</a></h2>
-                    <p>dovom ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke </p>
-                    <cite class="card-font-color-primary">Mar, 2017</cite>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header card-color-orange">
-                    <div class="author-img"><img src="../assets/images/a5.png"></div>
-                    <div class="author">Sarah Hardy</div>
-                </div>
-                <div class="card-block">
-                    <div class="post-img">
-                        <img src="../assets/images/c3.jpg">
-                        <a href="#">
-                            <div class="reference">
-                                <i class="fa fa-chain"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <h2><a href="#">Title Title Title</a></h2>
-                    <p>dovom ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke </p>
-                    <cite class="card-font-color-orange">Mar, 2017</cite>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header card-color-blue">
-                    <div class="author-img"><img src="../assets/images/a1.png"></div>
-                    <div class="author">Amir Hossein Najafabadi Farahani</div>
-                </div>
-                <div class="card-block">
-                    <div class="post-img">
-                        <img src="../assets/images/c5.png">
-                        <a href="#">
-                            <div class="reference">
-                                <i class="fa fa-chain"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <h2><a href="#">Title Title Title</a></h2>
-                    <p>dovom ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke </p>
-                    <cite class="card-font-color-blue">Mar, 2017</cite>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header card-color-default">
-                    <div class="author-img"><img src="../assets/images/a6.png"></div>
-                    <div class="author">John Wick</div>
-                </div>
-                <div class="card-block">
-                    <div class="post-img">
-                        <img src="../assets/images/real2.jpg">
-                        <a href="#">
-                            <div class="reference">
-                                <i class="fa fa-chain"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <h2><a href="#">Title Title Title</a></h2>
-                    <p>dovom ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke </p>
-                    <cite class="card-font-color-default">Mar, 2017</cite>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header card-color-default">
-                    <div class="author-img"><img src="../assets/images/a2.png"></div>
-                    <div class="author">John Wick</div>
-                </div>
-                <div class="card-block">
-                    <div class="post-img">
-                        <img src="../assets/images/c1.jpg">
-                        <a href="#">
-                            <div class="reference">
-                                <i class="fa fa-chain"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <h2><a href="#">Title Title Title</a></h2>
-                    <p>dovom ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke </p>
-                    <cite class="card-font-color-default">Mar, 2017</cite>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header card-color-orange">
-                    <div class="author-img"><img src="../assets/images/a3.png"></div>
-                    <div class="author">John Wick</div>
-                </div>
-                <div class="card-block">
-                    <div class="post-img">
-                        <img src="../assets/images/c2.jpg">
-                        <a href="#">
-                            <div class="reference">
-                                <i class="fa fa-chain"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <h2><a href="#">Title</a></h2>
-                    <p>dovom ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke </p>
-                    <cite class="card-font-color-orange">Mar, 2017</cite>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header card-color-primary">
-                    <div class="author-img"><img src="../assets/images/a4.png"></div>
-                    <div class="author">John Wick</div>
-                </div>
-                <div class="card-block">
-                    <div class="post-img">
-                        <img src="../assets/images/c3.jpg">
-                        <a href="#">
-                            <div class="reference">
-                                <i class="fa fa-chain"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <h2><a href="#">Title Title</a></h2>
-                    <p>dovom ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke </p>
-                    <cite class="card-font-color-primary">Mar, 2017</cite>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header card-color-blue">
-                    <div class="author-img"><img src="../assets/images/a5.png"></div>
-                    <div class="author">John Wick</div>
-                </div>
-                <div class="card-block">
-                    <div class="post-img">
-                        <img src="../assets/images/cover.jpg">
-                        <a href="#">
-                            <div class="reference">
-                                <i class="fa fa-chain"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <h2><a href="#">Title Title Title</a></h2>
-                    <p>dovom ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke dehd edhek dhed ekdhek dehd kehdekd ed ekdhekd he
-                        helkel ehdkeh hed kedhe dehdk edkehdke </p>
-                    <cite class="card-font-color-blue">Mar, 2017</cite>
-                </div>
-            </div>
+
+
         </div>
     </div>
 
@@ -230,6 +68,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/post.js"></script>
 </body>
 
 </html>
