@@ -70,9 +70,9 @@ $("#enter").click(function(){
             $('#error').css("color" , "#00cc11");
             $('#error').html("Successful");
             token = parsed_data.token;
-            /*$('html').fadeOut(1000, function (){
-                window.location.replace("login.html");
-            });*/
+            $('html').fadeOut(1000, function (){
+                window.location.replace("blog/index.html");
+            });
         }
     });
 });
