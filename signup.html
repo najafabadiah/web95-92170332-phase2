@@ -5,6 +5,7 @@
     <title>Sign up</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- header and nav-bar -->
@@ -25,6 +26,36 @@
         </div>
     </nav>
 
+    <section>
+        <div class="container">
+            <div class="form-group">
+                <div class="line-group clearfix">
+                    <div class="label"><i class="fa fa-id-card"></i></div>
+                    <input type="number" id="student-number" name="student_number" placeholder="Student Number">
+                </div>
+                <div class="line-group clearfix">
+                    <div class="label"><i class="fa fa-key"></i></div>
+                    <input type="password" id="password" name="password" placeholder="Password">
+                </div>
+                <div class="line-group clearfix">
+                    <div class="label"><i class="fa fa-user-o"></i></div>
+                    <input type="text" id="f-name" name="first_name" placeholder="First Name">
+                </div>
+                <div class="line-group clearfix">
+                    <div class="label"><i class="fa fa-user"></i></div>
+                    <input type="text" id="l-name" name="last_name" placeholder="Last Name">
+                </div>
+                <div class="line-group clearfix">
+                    <div class="label"><i class="fa fa-envelope"></i></div>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="line-group clearfix" id="error">
+
+                </div>
+                <button type="submit" class="create" id="create-account">Create</button>
+            </div>
+        </div>
+    </section>
 
 
     <!-- footer -->
@@ -35,5 +66,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
