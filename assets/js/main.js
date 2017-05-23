@@ -131,6 +131,59 @@ $("#create-post").click(function(){
     });
 });
 
+var smonth_length = [ 31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29 ];
+var month_length = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+var solar_month_name = ["فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"];
+var month_name = {
+    "Jan" : 0,
+    "Feb" : 1,
+    "Mar" : 2,
+    "Apr" : 3,
+    "May" : 4,
+    "Jun" : 5,
+    "Jul" : 6,
+    "Aug" : 7,
+    "Sep" : 8,
+    "Oct" : 9,
+    "Nov" : 10,
+    "Dec": 11
+};
 
+function parseDate(str){
+    var month = month_name[str[4] + str[5] + str[6]];
+    var date = parseInt(str[8] + str[9]);
+    var year = parseInt(str[20] + str[21] + str[22] + str[23]);
+    convertDate(year, month, date);
+}
+
+function convertDate(year, month, day){  ///Month between 0 to 11
+    var dyear = year - 1900;
+    var q = Math.floor(dyear/4);
+    month_length[1] = year % 4 === 0 ? 29 : 28;
+    var days = (dyear*365.25);
+    for(var i = 0 ; i < month ; i++)
+        days += month_length[i];
+    days += day;
+    days = Math.floor(days);
+    console.log(days);
+    days -= 78;
+    var dsyear = Math.floor(days/365);
+    var syear = 1279 + dsyear;
+    console.log(syear);
+    days -= Math.floor(dsyear/4);
+    days -= dsyear*365;
+    var i = 0
+    while(days > smonth_length[i]) {
+        if(i===6)
+            days++;
+        days -= smonth_length[i];
+        i++;
+    }
+    days--;
+    var el = document.querySelector("cite");
+    el.innerText = (year-621) + " " + solar_month_name[i] + " " + days;
+    console.log(solar_month_name[i]);
+    console.log(days);
+}
 
 

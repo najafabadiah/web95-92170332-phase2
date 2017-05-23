@@ -8,21 +8,25 @@ var form = new FormData();
 form.append("id", pair[1]);
 
 var settings = {
-    "async": true,
+    "async": false,
     "crossDomain": true,
-    "url": "https://ce419.herokuapp.com/blog/posts",
+    "url": "https://ce419.herokuapp.com/blog/post?id=" + pair[1],
     "method": "GET",
     "headers": {
         "x-token": localStorage.getItem("token")
     },
-    "data": form
+    "processData": false,
+    "contentType": false,
+    "mimeType": "multipart/form-data"
 };
-var posts;
-var result;
-$.ajax(settings).done(function (response) {
-    console.log(response);
-    if (response.status == 0) {
-        result = response;
-        posts = response.posts;
-    }
-});
+
+
+var response = JSON.parse($.ajax(settings).responseText);
+result = response;
+
+
+var title = document.querySelector("h1");
+title.innerText = result.post["title"];
+var paragraph = document.querySelector("p");
+paragraph.innerText = result.post["text"];
+parseDate(result.post["datetime"]);

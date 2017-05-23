@@ -2,7 +2,7 @@
  * Created by Amir Hossein on 5/6/2017.
  */
 var settings = {
-    "async": true,
+    "async": false,
     "crossDomain": true,
     "url": "https://ce419.herokuapp.com/blog/posts",
     "method": "GET",
@@ -10,8 +10,8 @@ var settings = {
         "x-token": localStorage.getItem("token")
     }
 };
-var posts;
-var result;
+var posts = "";
+var result ="";
 $.ajax(settings).done(function (response) {
     console.log(response);
     if (response.status == 0) {
@@ -19,9 +19,9 @@ $.ajax(settings).done(function (response) {
         posts = response.posts;
     }
 });
-result.posts;
+
 var page = document.querySelector(".card-columns");
-for(var i = 0 ; i < 3 ; i++){
+for(var i = 0 ; i < posts.length ; i++){
     var card = document.createElement("div");
     page.appendChild(card);
     card.className = "card";
@@ -32,7 +32,7 @@ for(var i = 0 ; i < 3 ; i++){
     var cardBlock = document.createElement("div");
     cardBlock.className = "card-block";
     card.appendChild(cardBlock);
-    cardBlock.innerHTML = "<div class='post-img'><img src='../assets/images/c1.jpg'><a href='#'><div class='reference'><i class='fa fa-chain'></i></div></a></div>";
-    cardBlock.innerHTML = "<h2><a href='post.html?id=" + posts[i].id + "'>" + posts[i].title + "</a></h2>";
-    cardBlock.innerHTML = "<p>" + posts[i].summary + "</p><cite class='card-font-color-default'>" + posts[i].datetime + "</cite>";
+    cardBlock.innerHTML += "<div class='post-img'><img src='../assets/images/c1.jpg'><a href='#'><div class='reference'><i class='fa fa-chain'></i></div></a></div>";
+    cardBlock.innerHTML += "<h2><a href='post.html?id=" + posts[i].id + "'>" + posts[i].title + "</a></h2>";
+    cardBlock.innerHTML += "<p>" + posts[i].summery + "</p><cite class='card-font-color-default'>" + posts[i].datetime + "</cite>";
 }
